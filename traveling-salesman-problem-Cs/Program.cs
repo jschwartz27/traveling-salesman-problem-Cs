@@ -13,7 +13,7 @@ namespace Gtraveling_salesman_problem_Csenetic
 
         static void Main(string[] arg)
         {
-            Parameters parameters = new(5, 10, 1);
+            Parameters parameters = new(5, 10, 4);
             new GeneticAlgorithm(
                 parameters.nGenerations,
                 parameters.lChromosome,

@@ -2,11 +2,8 @@
 {
     class Selection
     {
-        private readonly int[][] Genome;
-
-        public Selection(int[][] genome)
+        public static void Select(List<Chromosome> genome)
         {
-            this.Genome = genome;
         }
     }
 }

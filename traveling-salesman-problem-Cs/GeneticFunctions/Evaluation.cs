@@ -3,14 +3,13 @@
     class Evaluation
     {
 
-        private readonly int[] Chromosome;
+        // private readonly int[] Chromosome;
+        // public Evaluation(int[] chromosome)
+        // {
+        //    this.Chromosome = chromosome;
+        // }
 
-        public Evaluation(int[] chromosome)
-        {
-            this.Chromosome = chromosome;
-        }
-
-        public float Evaluate()
+        public static float Evaluate(List<int> chromosome)
         {
             return 5.5f;
         }

@@ -15,10 +15,9 @@ namespace traveling_salesman_problem_Cs
         }
 
         public void Evolve() {
-            int[] population = MiscFunctions.InitializeGenome(this.nChromosomes, this.lChromosome);
-            MiscFunctions.Print(population);
-            int[] fstChromosome = population;
-            int[] sndChromosome;
+            Chromosome[] genome = MiscFunctions.InitializeGenome(this.nChromosomes, this.lChromosome);
+            MiscFunctions.PrintGenome(genome);
+            Chromosome fstChromosome = genome[0];
         }
     }
 }
