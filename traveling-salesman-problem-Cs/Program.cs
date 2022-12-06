@@ -1,16 +1,24 @@
-﻿namespace Gtraveling_salesman_problem_Csenetic
+﻿using traveling_salesman_problem_Cs;
+
+namespace Gtraveling_salesman_problem_Csenetic
 {
     class Program
     {
-        static void MyMethod()
-        {
-            Console.WriteLine("I just got executed!");
-            const ushort nGen = 100;
-        }
+        public record Parameters
+        (
+            ushort nGenerations,
+            ushort lChromosome,
+            ushort nChromosomes
+        );
 
-        static void Main(string[] args)
+        static void Main(string[] arg)
         {
-            MyMethod();
+            Parameters parameters = new(5, 10, 1);
+            new GeneticAlgorithm(
+                parameters.nGenerations,
+                parameters.lChromosome,
+                parameters.nChromosomes
+            ).Evolve();
         }
     }
 }

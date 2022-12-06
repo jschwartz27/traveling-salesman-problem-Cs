@@ -2,13 +2,13 @@
 
 namespace traveling_salesman_problem_Cs
 {
-    internal class Genetic
+    class GeneticAlgorithm
     {
-        readonly int nGenerations;
+        readonly ushort nGenerations;
         readonly ushort lChromosome;
         readonly ushort nChromosomes;
 
-        public Genetic(int nGenerations, ushort lChromosome, ushort nChromosomes) {
+        public GeneticAlgorithm(ushort nGenerations, ushort lChromosome, ushort nChromosomes) {
             this.nGenerations = nGenerations;
             this.lChromosome = lChromosome;
             this.nChromosomes = nChromosomes;
@@ -16,20 +16,10 @@ namespace traveling_salesman_problem_Cs
 
         public void Evolve() {
             int[] population = MiscFunctions.InitializeGenome(this.nChromosomes, this.lChromosome);
-        
+            MiscFunctions.Print(population);
+            int[] fstChromosome = population;
+            int[] sndChromosome;
         }
-    }
-
-    public readonly struct Genome
-    {
-        public float Fitness { get; init; }
-        public int[] Chromosome { get; init; }
-        public Genome(float fitness, int[] chromosome) 
-        {
-            this.Fitness = fitness;
-            this.Chromosome = chromosome;
-        }
-        public override string ToString() => $"({Fitness}, {Chromosome})";
     }
 }
 
